@@ -1,0 +1,22 @@
+<div class="col-sm-6">
+        <table class="table table-bordered" id="sumOfProductsEarningsOutPut">
+    <thead class="label-info">
+        <tr>
+        <th><h3>Category Name</h3></th>
+        <th><h3>Product name</h3></th>
+        <th><h3>Total Earnings</h3></th>
+        </tr>
+    </thead>
+    {{#pullAllSales}} 
+        <tbody>
+            <tr>
+        <td><div class="well well-lg" name="Category_name" >{{Category_name}}</div></td>
+        <td><div class="well well-lg" name="Product_name">{{Product_name}}</div></td>
+        <td>
+         R{{Tot_Earnings_Per_Product}}
+        </td>
+            </tr>
+        </tbody>
+    {{/pullAllSales}}
+        </table>
+        </div>

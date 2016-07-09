@@ -1,0 +1,35 @@
+	
+	<h1>Add a Sale</h1>
+	<div class ="row">
+<form action="/sales/add" method="POST">
+	Date:<input type="date" name="Sales_date">
+	Product-name: 
+	<select name="Product_name">
+		{{#pushMoreSales}}
+		<option value="{{id}}">{{Product_name}}</option>
+		{{/pushMoreSales}}
+	</select>
+	Sales-price:<input type="number" name="product_price" required></br>
+	<br/>
+	<div class="cus" style="">
+	No-Sold:<input type="number" name="qTy" required>
+	</div>
+	<input type="submit">
+</form>
+	<br>
+	</div>
+
+
+<style type="text/css">
+.main-menu {
+	display: none;
+}
+
+.cus{
+	position: inherit;
+    margin-left: 468px;
+    margin-right: -15px;
+    padding: 48px;
+    padding-bottom: 46px;
+}
+</style>

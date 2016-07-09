@@ -1,0 +1,60 @@
+<div class="row"> 
+     <section class="webdesigntuts-workshop">
+   <form>
+    <label for="pullCatNameReq">Search</label>
+    <input class='searchTextBox' id="pullCatNameReq" name="Category_name" placeholder="Search for a Category">         
+       </form>
+</section>
+</div>
+    <div class="row"> 
+    <div class="col-sm-6" style="float:left">
+        <table class="table table-bordered" id='reqCategoriesOutPut'>
+    <thead class="label-info">
+        <tr>
+        <th><h3>Category Name</h3></th>
+        <th><h3>Manage</h3></th>
+        </tr>
+    </thead>
+    {{#categories}} 
+        <tbody>
+            <tr>
+        <td><div class="well well-lg" name="Category_name">{{Category_name}}</div>
+
+        </td>
+        <td>
+         <button type="button" class="btn btn-default" onClick="location.href='/productsCategories/edit/{{id}}'"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+     <button type="button" class="btn btn-danger" onClick="location.href='/productsCategories/delete/{{id}}'"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+        </td>
+            </tr>
+        </tbody>
+    {{/categories}}
+        </table>
+        <div><span class="glyphicon glyphicon-plus"></span><button type="button" class="btn btn-success" onClick="location.href='/addProductsCategories'">New Category</button>
+    </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            <h3 class="panel-title"><strong><span class="glyphicon glyphicon-stats"></span> Most Popular Category</strong></h3>
+            </div>
+            <div class="panel-body">
+        {{#each showMostPopularCat}}
+<p><h4 class="label-info"><strong>Category Name :</strong>{{Category_name}}</p>
+<p ><h4 class="label-info"><strong>Category Quantity :</strong>{{Quantity}}</p>
+        {{/each}}
+            </div>
+          </div>
+          <br>
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong><span class="glyphicon glyphicon-stats"></span> Least Popular Category</strong></h3>
+            </div>
+            <div class="panel-body" role="label label-info">
+                {{#each showLeastPopularCAt}}
+            <p><h4 class="label-info"><strong>Category Name :</strong>{{Category_name}}</p>
+            <p><h4 class="label-info"><strong>Category Quantity :</strong>{{Quantity}}</p>
+                {{/each}}
+            </div>
+          </div>
+        </div>
+    </div>

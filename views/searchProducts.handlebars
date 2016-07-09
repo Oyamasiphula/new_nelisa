@@ -1,0 +1,24 @@
+<div class="col-sm-6" style="float:left">
+<table class="table table-bordered" id="reqProductsOutPut">
+        <thead class="label-info">
+        
+            <tr>
+            <th><h3>Product Name</3></th>
+            <th><h3>Manage</3></th>
+            </tr>
+        </thead>
+        {{#products}} 
+            <tbody>
+                <tr>
+            <td name="Product_name">{{Product_name}}
+                <div class="well well-lg" name="Category_name">{{Category_name}}</div>
+            </td>
+            <td>
+         <button type="button" class="btn btn-default" onClick="location.href='/products/edit/{{id}}'"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+         <button type="button" class="btn btn-danger" onClick="location.href='/products/delete/{{id}}'"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+            </td>
+                </tr>
+            </tbody>
+        {{/products}}
+</table>
+    </div>

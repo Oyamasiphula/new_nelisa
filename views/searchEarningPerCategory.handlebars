@@ -1,0 +1,20 @@
+<div class="col-sm-6" style="float:left">
+    <table class="table table-bordered" id="reqEarningsCategoryNameTd">
+    <thead class="label-info">
+        <tr>
+        <th><h3>Category Name</h3></th>
+        <th><h3>Earnings Per Category</h3></th>
+        </tr>
+    </thead>
+    {{#pullCategoryNameAsAResult}} 
+        <tbody>
+            <tr>
+        <td><div class="well well-lg" Name="Category_name" >{{Category_name}}</div></td>
+        <td>
+         R{{Tot_Earnings_Per_Product}}
+        </td>
+            </tr>
+        </tbody>
+    {{/pullCategoryNameAsAResult}}
+    </table>
+</div>

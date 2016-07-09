@@ -1,0 +1,34 @@
+<h1>Categories</h1>
+<div class="row">
+	<br>
+{{#Categories}}
+  <h2>{{Category_name}}</h2>
+  <a href="/productsCategories/edit/{{id}}">Edit</a>
+  <a href="/productsCategories/delete/{{id}}">Delete</a>
+{{/Categories}}
+
+{{#empty}}
+  <p>The list is empty.</p>
+{{/empty}}
+
+	<div id="add-categories">
+	
+		<h1>Add a Category</h1>
+		<form action="/productsCategories/add" method="POST">
+			Description: <input type="text" name="Category_name">	
+			<input type="submit">
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+<style type="text/css">
+.main-menu {
+	display: none;
+}
+
+</style>
+

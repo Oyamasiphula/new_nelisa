@@ -1,0 +1,34 @@
+<div class="row">
+  <section class="webdesigntuts-workshop">
+   <form>
+    <label for="pullSumOfEarnings">Search</label>
+    <input class='searchtextBox' id="pullSumOfEarnings" name="Product_name" placeholder="Search Product/Category">         
+       </form>
+  </section>
+  </div>
+
+<div class="row"> 
+    <div class="col-sm-6">
+        <table class="table table-bordered" id="sumOfProductsEarningsOutPut">
+    <thead class="label-info">
+        <tr>
+        <th><h3>Category Name</h3></th>
+        <th><h3>Product name</h3></th>
+        <th><h3>Total Earnings</h3></th>
+        </tr>
+    </thead>
+    {{#sumOfEarnings}} 
+        <tbody>
+            <tr>
+        <td><div class="well well-lg" name="Category_name" >{{Category_name}}</div></td>
+        <td><div class="well well-lg" name="Product_name" >{{Product_name}}</div></td>
+        <td>
+         R{{Tot_Earnings_Per_Product}}
+        </td>
+            </tr>
+        </tbody>
+    {{/sumOfEarnings}}
+        </table>
+        <div><span class="glyphicon glyphicon-plus"></span><button type="button" class="btn btn-success" onClick="location.href='/addProductsCategories'">New Category</button>
+    </div>
+        </div>

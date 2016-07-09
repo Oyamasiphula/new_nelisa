@@ -1,0 +1,61 @@
+<div class="row">
+      <section class="webdesigntuts-workshop">
+   <form>
+    <label for="pullProductProfit">Search</label>
+    <input class='searchbar' id="pullProductProfit" name="Product_name" placeholder="Search products">         
+       </form>
+</section>
+  </div>
+<div class="row"> 
+    <div class="col-sm-6">
+        <table class="table table-bordered" id ="productNamesProfitsOutPutTd">
+            <thead class="label-info">
+        
+                <tr>
+                    <th><h3>Product Name</3></th>
+                    <th><h3>Product Profit</3></th>
+                    <!-- <th><h3>Manage</3></th> -->
+                </tr>
+            </thead>
+                    {{#Sales}} 
+            <tbody>
+                <tr>
+                    <td name="Product_name"><div class="well well-lg" >{{Product_name}}</div>
+                    </td>
+                    <td name="product_price">R{{Profits}}
+                    </td>
+                    <!-- <td>
+                     <button type="button" class="btn btn-default" onClick="location.href='/products/edit/{{id}}'"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                     <button type="button" class="btn btn-danger" onClick="location.href='/products/delete/{{id}}'"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                    </td> -->
+                </tr>
+            </tbody>
+                    {{/Sales}}
+        </table>
+    </div>
+
+    <div class="col-sm-5" style ="float: right">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            <h3 class="panel-title"><strong><i class="fa fa-thumbs-o-up fa-2x" ></i> Most Profitable Product</strong></h3>
+            </div>
+        <div class="panel-body">
+                {{#bestProduct}}
+            <p><h4 class="label-info"><strong>Product name :</strong>{{Product_name}}</p>
+            <p ><h4 class="label-info"><strong>Profit Amount :</strong>R{{Profits}}</p>
+                {{/bestProduct}}
+        </div>
+          <br>
+    </div>
+</div>
+
+
+
+<style type="text/css">
+.well-lg {
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #000D23;
+    display: -webkit-inline-box;
+}
+</style>

@@ -1,0 +1,40 @@
+<div class="row">
+  <section class="webdesigntuts-workshop">
+   <form>
+    <label for="pullProductsEarnings">Search</label>
+    <input class='searchTextBox' id="pullProductsEarnings" name="Product_name" placeholder="Search Product">         
+       </form>
+  </section>
+  </div>
+
+<div class="row"> 
+    <div class="col-xs-10" style="float:right">
+        <table class="table table-bordered" id="reqProductsEarning">
+            <thead class="label-info">
+        
+                <tr>
+                    <th><h3>Product Name</3></th>
+                    <th><h3>Earnings Per Product</3></th>
+                    <!-- <th><h3>Manage</3></th> -->
+                </tr>
+            </thead>
+                    {{#Sales}} 
+            <tbody>
+                <tr>
+                    <td><div name="Product_name" class="well well-lg">{{Product_name}}</div>
+                    </td>
+                    <td name="product_price">R{{Tot_Earnings_Per_Product}}
+                    </td>
+                    <!-- <td>
+                     <button type="button" class="btn btn-default" onClick="location.href='/products/edit/{{id}}'"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                     <button type="button" class="btn btn-danger" onClick="location.href='/products/delete/{{id}}'"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                    </td> -->
+                </tr>
+            </tbody>
+                    {{/Sales}}
+        </table>
+            <div>
+                <span class="glyphicon glyphicon-plus"></span><button type="button" class="btn btn-success" onClick="location.href='/sales/showAddSales'">+ Add Sales +</button>
+            </div>   
+    </div>
+</div>

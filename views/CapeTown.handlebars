@@ -1,0 +1,13 @@
+<h4>Now Stared with Nelisas webapp !!! :-)</h4>
+<p>Now let's display all the data you mined from the Nelissa's CSV File online. For that you will need a web server, a template engine and data. You already have the data, as a web server we will be using Express JS and as a template engine Handlebars JS. You will install all these depencies using npm</p>
+
+<p>There are loads of alternatives to all the above in the Node JS eco-system, but knowing how the selected toolset work will give you a good baseline to explore alternatives from.</p>
+<h1>{{town}}</h1>
+
+<h2>stations</h2>
+
+<ul>
+{{#stations}}
+	<li>{{this.name}}</li>
+{{/stations}}
+</ul>

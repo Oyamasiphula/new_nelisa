@@ -1,0 +1,215 @@
+<!-- DOCTYPE html -->
+<html lang="en">
+	<head>
+			<title>Nelisa's App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/freelancer.css">
+	<link rel="stylesheet" type="text/css" href="/css/logpage.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/search.js"></script>
+		</head>
+
+    <body class="bg" background="/img/Wallpaper.jpg">
+
+	{{#if isAuthenticated}}
+
+	<button class="Home-but"><a href="/"><span class="glyphicon glyphicon-home"></span>Nelisa's Spaza</a></button>
+	<div id='cssmenu'>
+      <ul>
+          <li class='has-sub'><a href='/products'><span class="glyphicon glyphicon-th-list"></span> Products</a>
+          </li>
+          <li><a href='/productsCategories'><span class="glyphicon glyphicon-th-list"></span> Categories</a></li>
+          <li><a href='/about'>About</a></li>
+          <li><a href='#'>Contact</a></li>
+      </ul>
+  </div>
+
+    <div class="container">
+    	{{{body}}}
+      <nav class="main-menu">
+            <ul>
+            <li class="has-subnav">
+                <a href="/sales">
+                   <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Products Sales
+                    </span>
+                </a>
+            </li>
+                <li>
+                  <a href="/salesSummary/showCategories">
+                  <i class="fa fa-gg-circle fa-lg"></i> Sales Categories Summary
+                  </a>
+                </li>
+            <li>
+                  <a href="/salesSummary/EarningsPerCategory">
+                  <i class="fa fa-gg-circle fa-lg"></i>Earnings Per Category
+                  </a>
+            </li>
+                <ul>
+                  <li>
+                    <a href="/salesProfits">
+                       <i class="fa fa-balance-scale fa-2x"></i>
+                        <span class="nav-text">
+                            Products Profits
+                        </span>
+                    </a>
+                </li>
+              <li>
+                    <a href="#">
+                      <i class="fa fa-star-half-o fa-2x"></i>
+                        <span class="nav-text">
+                            Regular Sales
+                        </span>
+                    </a>
+              </li>
+                </ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                      <a href="#">
+                       <i class="fa fa-truck fa-2x"></i>
+                        <span class="nav-text">
+                            Suppliers
+                        </span>
+                      </a>
+                    </li>
+                <li>
+                   <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+  </div>
+</body>
+
+
+    <footer>
+            <img id="fimg" style="float: right;height: 178px;width: 100%;position: absolute;margin-top: 71px;" src="/img/intro-bg.jpg">
+        <div id="wrap">
+    <div class="footer-above" >
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Location</h3>
+                    <p>3481 Khayelitsha<br>site C,90210</p>
+                </div>
+  <div class="dots">
+
+  <div class="fade-top">
+  </div>
+</div>
+
+    <div class="footer-col col-md-4">
+
+        <h3>Around eMaKasana!</h3>
+         <div class="socialbar">
+    <br>
+         <div><a href="https://twitter.com/projectcodex"><img title="Twitter" src="https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/twitter-48.png" alt="Twitter" width="35" height="35" /></a>
+          <a href="https://www.facebook.com/projectcodex"><img title="Facebook" src="https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/facebook-48.png" alt="Facebook" width="35" height="35" /></a>
+           <a href="mailto:info@projectcodex.co"><img title="Email" src="https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/mail-48.png" alt="Email" width="35" height="35" /></a>
+      <a href="http://instagram.com/projectcodeX"><img title="Instagram" src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_6-48.png" alt="Instagram" width="35" height="35" /></a>
+    </div>
+
+      <h4>Follow US Here</h4>
+      <div class="footer-below">
+    <small>Copyright <img src="/img/CopyrightSymbol.png"> Nelisas_App 2015</small>
+      </div>
+    </div>
+        </div>
+          </div>
+            </div>
+     </footer>
+		 {{else}}
+<div class="container">
+		 <div class="wrapper">
+		   <div class="buttonWrapper">
+		     <div class="selected signIn">
+		       <h2>Sign In</h2>
+		     </div>
+		     <div class="signUp">
+		       <h2>Sign Up</h2>
+		     </div>
+		   </div>
+		   <form class="main">
+		     <label for="firstName">First Name</label>
+		     <input type="text" placeholder="First Name" id="firstName" name="firstName" required="required"/>
+		     <label for="lastName">Last Name</label>
+		     <input type="text" placeholder="Last Name" id="lastName" name="lastName" required="required"/>
+		     <label for="your username">E-Mail</label>
+		     <input type="text" placeholder="username" id="your username" name="username" required="required"/>
+		     <label for="password">Password</label>
+		     <input type="password" placeholder="Password" id="password" name="password" required="required"/>
+		     <button type="submit" name="signIn" id="subButton">Sign In</button>
+		     <button type="reset">Reset</button>
+		   </form>
+		 </div>
+	 </div>
+		 <script type="text/javascript">
+
+$(document).ready(function() {
+				 $('#firstName').hide();
+				 $('#lastName').hide();
+
+ // $('.signUp').on('click', function() {
+ //  popInput();
+ //  $(this).siblings().removeClass('selected');
+ //  $(this).addClass('selected');
+ //  $('.main').css('background', 'turquoise');
+ //  $('#firstName').show();
+ //  $('#lastName').show();
+ //
+ //  $('#subButton').text('Sign Up');
+ // });
+
+ $('.signIn').on('click', function() {
+	 popInput();
+	 $(this).siblings().removeClass('selected');
+	 $(this).addClass('selected');
+	 $('.main').css('background', 'tomato');
+	 $('#firstName').hide();
+	 $('#lastName').hide();
+	 $('#subButton').text('Sign In');
+ });
+
+ function popInput() {
+	 $('.main').children('input').height(0);
+	 $('.main').children('input').css('padding', '0');
+	 $('.main').children('input').animate({
+		 height: '20px',
+		 padding: '1em'
+	 }, 200);
+ }
+});
+		 </script>
+		 {{/if}}
+
+
+</html>
